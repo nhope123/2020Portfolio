@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Piedra&family=Roboto+Slab:wght@300&display=swap');
+
+:root{
+  --tribute-text-bg:rgba(250, 250,250,0.4);
+}
+*{ box-sizing: border-box;}
+body,html{
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: fixed no-repeat url('https://i2.pickpik.com/photos/188/550/343/water-texture-ripples-aqua-preview.jpg');
+  background-size: cover;
+
+}/*
+#title, #content{ display: none;}
+ /*Tribute Page css */
+#main{
+  margin: auto;
+  width: 95vw;
+  height: auto;
+  /*border: 2px solid blue;*/
+}
+.fish1{
+  z-index: 0;
+  width: 6vw;
+  display: inline;
+  position: absolute;
+  top: 100px;
+  left: 35px;
+  animation-name: swimmingFish;
+  animation-duration: 150s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes swimmingFish {
+    0%{ transform: rotate(90deg); top: 10%; left: 2%;} /* #1 --> */
+    12.5%{ transform: rotate(140deg); top: 10%; left: 97%;} /*#2 <-- */
+    25%{ transform: rotate(270deg); top: 35%; left: 2%;} /*#3 --> */
+    37.5%{ transform: rotate(90deg); top: 60%; left: 87%;} /*#4 <-- */
+    50%{ transform: rotate(270deg); top: 85%; left: 2%;} /* #5 --> */
+    62.5%{ transform: rotate(-90deg); top: 85%; left:87%;} /*#6 <-- */
+    75%{ transform: rotate(90deg); top: 60%; left: 2%;} /* #7--> */
+    87.5%{ transform: rotate(45deg); top: 35%; left:87%;} /* #8 <-- */
+    100%{ transform: rotate(-90deg); top: 10; left: 2%;}
+}
+#title{
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 9vmin;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  line-height: 0.1;
+  text-shadow: -6px 3px 2px rgba(27,27,26,0.7);
+  text-transform: capitalize;
+}
+.flag{
+  display: inline-block;
+  z-index: 4;/*
+  position: relative;
+  float: right;
+  vertical-align: middle;
+  */
+  position: absolute;
+  right: 25px;
+  top: 20px;
+
+}
+.flag img{
+  width: 4vmin;
+  height: auto;
+}
+.motto{
+  font-family: 'Piedra', cursive;
+  font-size: 2.5vw;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+#title p{
+  text-align: center;
+}
+#content{
+  width: 85%;
+  margin:auto;
+  max-width: 890px;
+  z-index: 2;
+}
+#img-div{
+  border: 0px;
+  border-radius: 0.75vw;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 0.5vmax;
+  overflow: hidden;
+  -webkit-box-shadow: -4px 3px 15px 0px rgba(27,27,26,0.98);
+  box-shadow: -4px 3px 15px 0px rgba(27,27,26,0.98);
+}
+#image{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+#img-caption{
+  font-size: 2vmin;
+  z-index:3;
+  position: absolute;
+  bottom:0px;
+  left: 0px;
+  background-color: rgba(250, 250,250,0.7);
+  border: 0px;
+  border-radius: .75vw;
+  padding:0px 8px;
+}
+#tribute-link{
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+}
+#tribute-link:hover{
+  font-size: 2.5vmin;
+  color: blue;
+}
+#tribute-info{
+  position: relative;
+  width: 100%;
+  border: 0px solid black;
+  border-radius: 15px;
+  padding: 30px;
+  background-color: var(--tribute-text-bg);
+  line-height: 1.5;
+  font-size: 2.8vmin;
+  margin: 4vw auto;
+  font-family: 'Roboto Slab', serif;
+  -webkit-box-shadow: -4px 3px 15px 0px rgba(27,27,26,0.98);
+  box-shadow: -4px 3px 15px 0px rgba(27,27,26,0.98);
+}

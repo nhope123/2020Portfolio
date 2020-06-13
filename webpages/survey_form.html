@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./../css/project.css">
+    <title>Survey</title>
+  </head>
+  <body id="survey">
+    <!-- Header -->
+    <header class="survey-head">
+      <!-- User Story 1 -->
+      <h1 id="title" style="" class="">Experience Travel Survey</h1>
+      <!-- User Story 2 -->
+      <p id="description">Have you experienced diverse destinations and culture, let us know. </p>
+    </header>
+    <main class="form-layout">
+      <!-- User Story 3 -->
+      <form id="survey-form" class="" action="#" method="post">
+        <!-- User Story 4 -->
+        <div class="survey-dropdown">
+          <label id="name-label" for="name">Name</label><br>
+          <input id="name" type="text" name="name" required placeholder="John">
+        </div>
+        <!-- User Story 5 -->
+        <div class="survey-dropdown">
+          <label id="email-label" for="email">Email</label><br>
+          <input id="email"  type="email" name="email" required pattern="[a-z]\w*@[a-z]\w*.[a-z]{3}" placeholder="username@example.com">
+        </div>
+        <!-- User Story 7 -->
+        <div class="survey-dropdown">
+          <label id="number-label" for="number">Age</label><br>
+          <input id="number" type="number" name="age" placeholder="1" pattern="[0-9]*" max="120" min="1">
+        </div>
+        <!-- User Story 12 -->
+        <div class="survey-dropdown">
+          <label for="dropdown" for="frequency" >
+            How many time you travelled abroad.<br></label>
+            <select id="dropdown"  name="frequency">
+              <option value="0">0</option>
+              <option value="1-5">1 - 5</option>
+              <option value="6-10">6 - 10</option>
+              <option value="11-15">11 - 15</option>
+              <option value="16">16 or more</option>
+            </select>
+        </div>
+        <!-- User Story 13 -->
+        <div class="survey-label">
+          <fieldset>
+            <legend>How did you Travel?</legend>
+            <input id="air" type="radio" name="means" value="air">
+            <label for="air" >Air</label><br>
+            <input id="land" type="radio" name="means" value="land">
+            <label for="land" >Land</label><br>
+            <input id="water" type="radio" name="means" value="water">
+            <label for="water" >Water</label><br>
+            <input id="na" type="radio" name="means" value="na">
+            <label for="na" >Do not apply</label><br>
+          </fieldset>
+        </div>
+        <div class="survey-label">
+          <fieldset>
+            <legend>Season when you last traveled</legend>
+            <input id="fall" type="checkbox" name="season" value="autumn">
+            <label for="fall">Autumn</label><br>
+            <input id="winter" type="checkbox" name="season" value="winter">
+            <label for="winter">Winter</label><br>
+            <input id="spring" type="checkbox" name="season" value="spring">
+            <label for="spring">Spring</label><br>
+            <input id="summer" type="checkbox" name="season" value="summer">
+            <label for="summer">Summer</label><br>
+            <input id="none" type="checkbox" name="season" value="none">
+            <label for="none">Do not apply</label>
+          </fieldset>
+        </div>
+        <div class="survey-dropdown">
+          <label for="weather">Weather at the last destination was:</label>
+            <select id="weather" name="weather">
+              <option value="rainy">Rainy</option>
+              <option value="sunny">Sunny</option>
+              <option value="cloudy">Cloudy</option>
+              <option value="hot">Hot</option>
+              <option value="cold">Cold</option>
+              <option value="windy">Windy</option>
+              <option value="snow">Snow</option>
+              <option value="foggy">Foggy</option>
+            </select>
+        </div>
+        <div class="survey-label">
+          <fieldset>
+            <legend>Rate Your Travel Experience</legend>
+            <input id="vs" type="radio" name="rate" value="very satisfied">
+            <label for="vs">Very Satisfied</label><br>
+            <input id="sa" type="radio" name="rate" value="satisfied">
+            <label for="sa">Satisfied</label><br>
+            <input id="nu" type="radio" name="rate" value="neutral">
+            <label for="nu">Neutral</label><br>
+            <input id="ds" type="radio" name="rate" value="dissatisfied">
+            <label for="ds">Dissatisfied</label><br>
+            <input id="vd" type="radio" name="rate" value="very dissatisfied">
+            <label for="vd">Very Dissatisfied</label><br>
+            <input id="vo" type="radio" name="rate" value="na">
+            <label for="vo">Void Response</label><br>
+          </fieldset>
+        </div>
+        <div class="survey-label">
+          <label for="comment">Any comments or suggestions?</label><br>
+          <textarea .survey-texarea id="comment" name="name" cols="67" rows="10" placeholder="Comment"></textarea>
+        </div>
+        <div >
+          <button  id="submit" class="submit" type="submit" name="button">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

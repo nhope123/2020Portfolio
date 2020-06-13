@@ -2,23 +2,73 @@
 
 :root {
   --tribute-text-bg: rgba(250, 250, 250, 0.4);
+  --blue-orange-white: rgba(255, 255, 255, 1); /* Blue Orange Color Scheme: White */
+  --blue-orange-orange: rgba(253, 157, 105, 1); /* Blue Orange Color Scheme: Orange */
+  --blue-orange-Du-blue: rgba(85, 165, 197, 1); /* Blue Orange Color Scheme: Dull Blue */
+  --blue-orange-Br-blue: rgba(49, 180, 232, 1); /* Blue Orange Color Scheme: Bright Blue */
+  --blue-orange-Da-blue: rgba(13, 55, 72, 1); /* Blue Orange Color Scheme: Dark Blue */
 }
 
 * { box-sizing: border-box; }
 
 body,html {
   margin: 0px;
-  width: 100vw;
-  height: 100vh;
-  background: fixed no-repeat url('https://i2.pickpik.com/photos/188/550/343/water-texture-ripples-aqua-preview.jpg');
-  background-size: cover;
-
+  width: 100%;
+  height: 100%;
 }
 
+/* Survey Page Css */
+#survey{
+  background-color: var(--blue-orange-Br-blue);
+}
+ .form-layout{
+   max-width: 600px;
+   height: auto;/*width:*/
+   margin: 25px auto;
+   padding: 20px;
+   color: var(--blue-orange-white);
+   background-color: var(--blue-orange-Da-blue);
+   line-height: 2.2;
+   border: 0;
+   border-radius: 10px;
+ }
+ .survey-head{
+   text-align: center;
+   font-size: 24px;
+ }
+ .survey-head h1{
+   text-shadow:  -5px 2px 2px #FFFBF9; 
+ }
+ .survey-dropdown, .survey-label{
+   width: 90%;
+   margin: auto 5%;
+ }
+ .survey-dropdown input, .survey-dropdown select{ width: 90%; }
+ .submit{
+  position: relative;
+  left: 38%;
+  width: 120px;
+  height: 30px;
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  color: var(--blue-orange-white);
+  background-color: var(--blue-orange-Br-blue);
+
+}
+#sub{
+  color: var(--blue-orange-white);
+  background-color: var(--blue-orange-orange);}
+
  /* Tribute Page css */
+#tribute{
+  background: fixed no-repeat url('https://i2.pickpik.com/photos/188/550/343/water-texture-ripples-aqua-preview.jpg');
+  background-size: cover;
+}
+
 #main, #content, #image { margin: auto; }
 
-#main, #title, .flag img, #img-div, #image{ height: auto; }
+#main, .tribute-title, .flag img, #img-div, #image{ height: auto; }
 
 #main { width: 95vw; }
 
@@ -100,7 +150,7 @@ body,html {
   }
 }
 
-#title {
+.tribute-title {
   font-family: 'Lovers Quarrel', cursive;
   font-size: 9vmin;
   font-weight: bold;
@@ -134,7 +184,7 @@ body,html {
   margin: 0;
 }
 
-#title p{ text-align: center; }
+.tribute-title p{ text-align: center; }
 
 #content {
   width: 85%;

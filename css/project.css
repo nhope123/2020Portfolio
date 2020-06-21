@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Piedra&family=Roboto+Slab:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap');
+/*
+font-family: 'Piedra', cursive;
+font-family: 'Sriracha', cursive;
+font-family: 'Roboto Slab', serif;
+font-family: 'Lovers Quarrel', cursive;
 
+*/
 :root {
   --tribute-text-bg: rgba(250, 250, 250, 0.4);
   --blue-orange-white: rgba(255, 255, 255, 1); /* Blue Orange Color Scheme: White */
@@ -25,45 +31,56 @@ body, html, .tribute-title, #img-div, #image,#tribute-info{ width: 100%;}
 .fish1,.flag, #img-caption{ position: absolute;}
 #tribute-link, li .nav-link { text-decoration: none;}
 #header, li .nav-link{ color: var(--blue-orange-white);}
+#com-title, #nav-list, .montra{ width: auto;}
 
 /* Product Landing Css */
-@media screen and (max-width: 480px ) {
-  .landing-main{ width: 100vw;}
+@media screen and (max-width: 357px ) {
+  .landing-main{
+    width: 100vw;
+    margin: 140px auto auto auto;
+  }
+  .land-dropdown { display: block;}
+  #nav-bar{ display: none;}
 }
-@media screen and (min-width: 481px ) {
-  .landing-main{ width: 80vw;}
+@media screen and (max-width: 531px )and (min-width: 358px) {
+  .landing-main{
+    width: 100vw;
+    margin: 74px auto auto auto;
+  }
+  .land-dropdown { display: block;}
+  #nav-bar{ display: none;}
+}
+@media screen and (min-width: 532px ) {
+  .landing-main{
+    width: 80vw;
+    margin: 74px auto auto auto;
+  }
+  .land-dropdown { display: none;}
+  #nav-bar{ display: block;}
 }
 #header{
   position: fixed;
   left: 0;
-  top: 0;/*
-  height: 54px;*/
+  top: 0;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid black;
   box-sizing:border-box;
   padding: 6px;
   z-index: 2;
-  background-color: var(--blue-orange-Du-blue);
+  background-color: var(--blue-orange-Da-blue);
   font-family: 'Piedra', cursive;
 }
 #header-img{
   padding-top: 3px;
 }
 .landing-main{
-  /*width: 80vw;*/
-  margin: 74px auto auto auto;
   border: 3px solid blue;
 }
 #com-title{
-  width: auto;
   padding-left: 8px;
   padding-top: 15px;
   margin: 0px;
-}
-#nav-list li{
-  float: right;
 }
 li .nav-link{
   padding: 8px;
@@ -76,29 +93,35 @@ li .nav-link:hover{ background-color: var(--blue-orange-Br-blue);}
   list-style-type: none;
   margin: 0;
   padding-top: 22px;
-  width: auto;
 }
 .montra{
-  width: auto;
   text-align: center;
-  border: 3px solid green;
+  font-family: 'Sriracha', cursive;
+  color: var(--blue-orange-Da-blue);
 }
 .price-flex{
   display: flex;
 }
-.land-dropdown {
-  display: block;
-  float: right;
-  /*padding-top: 30px;
-  text-align: center;
-  padding: 8px 8px ;
-  border: none;
-  border-radius: 25px;*/
-
+.landing-form{
+  border: 2px solid black;
+  width: auto;
+  margin: 0px auto;
+  position: relative;
 }
+#submit{
+  position: relative;
+  left: -14px;
+  height: 34px;
+  border: 0px solid black;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: var(--blue-orange-Da-blue);
+  color: var(--blue-orange-white);
+  font-weight: bold;
+}
+.land-dropdown, .land-dropbtn, #nav-list li{ float: right; }
 .land-dropbtn {
   display: block;
-  float: right;
   text-align: center;
   border: 0px solid black;
   border-radius: 25px;

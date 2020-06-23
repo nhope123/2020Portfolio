@@ -262,7 +262,9 @@ li .nav-link{
 
 
  /*---------------------- Tribute Page css -------------------------------------*/
-
+/*#b1{text-shadow: -6px 3px 2px rgb(0, 37, 253);}
+#b2{text-shadow: -6px 3px 2px yellow;}
+#b3{text-shadow: -6px 3px 2px rgb(0, 220, 0);}*/
 #tribute{
   background: fixed no-repeat url('https://i2.pickpik.com/photos/188/550/343/water-texture-ripples-aqua-preview.jpg');
   background-size: cover;
@@ -408,6 +410,7 @@ li .nav-link{
 }
 
 #tribute-link {
+  font-family: 'Roboto Slab', serif;
   font-style: italic;
   color: black;
 }
@@ -423,9 +426,13 @@ li .nav-link{
   padding: 30px;
   background-color: var(--tribute-text-bg);
   line-height: 1.5;
-  font-size: 2.8vmin;
+  /*font-size: 2.8vmin;*/
   margin: 4vw auto;
-  font-family: 'Roboto Slab', serif;
+  /*font-family: 'Roboto Slab', serif;*/
   -webkit-box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
   box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
+}
+#tribute-info p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5vmin;
 }

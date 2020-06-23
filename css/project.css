@@ -28,11 +28,11 @@ body,html {
 }
 /*--------------------------- Multiple style -----------------------------------*/
 
-body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #header,.survey-input{ width: 100%;}
-.survey-dropdown, .survey-label,.survey-dropdown input, .survey-dropdown select,{ width: 90%;}
+body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #header,.survey-input, .text-t,.text-a{ width: 100%;}
+.survey-dropdown, .survey-label,.survey-dropdown input, .survey-dropdown select{ width: 90%;}
 #header-img, #com-title, li .nav-link, #image, #form, .land-dropbtn, .land-dropdown:hover .land-dropdown-content{ display: block;}
 .land-dropdown-content a,.price-block, .price-block span, .copyright, .contact, .survey-dropdown{ display: block; }
-#nav-list,.tribute-title, #img-div{ overflow: hidden;}
+#nav-list,.tribute-title, #img-div, .text-a{ overflow: hidden;}
 #header-img,#com-title{ float: left; }
 #tribute-info, .survey-submit, .tribute-title, #img-div, .landing-main, .land-dropdown, #form, .landing-form, #submit, .price-block span{ position: relative; }
 .fish1,.flag, #img-caption, .land-dropdown-content{ position: absolute;}
@@ -262,9 +262,7 @@ li .nav-link{
 
 
  /*---------------------- Tribute Page css -------------------------------------*/
-/*#b1{text-shadow: -6px 3px 2px rgb(0, 37, 253);}
-#b2{text-shadow: -6px 3px 2px yellow;}
-#b3{text-shadow: -6px 3px 2px rgb(0, 220, 0);}*/
+
 #tribute{
   background: fixed no-repeat url('https://i2.pickpik.com/photos/188/550/343/water-texture-ripples-aqua-preview.jpg');
   background-size: cover;
@@ -350,7 +348,6 @@ li .nav-link{
 }
 
 .tribute-title {
-  /*font-family: 'Lovers Quarrel', cursive;*/
   font-family: 'Piedra', cursive;
   font-size: 5vmin;
   margin-top: 10px;
@@ -426,9 +423,7 @@ li .nav-link{
   padding: 30px;
   background-color: var(--tribute-text-bg);
   line-height: 1.5;
-  /*font-size: 2.8vmin;*/
   margin: 4vw auto;
-  /*font-family: 'Roboto Slab', serif;*/
   -webkit-box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
   box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
 }

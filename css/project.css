@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Piedra&family=Roboto+Slab:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 /*
 font-family: 'Piedra', cursive;
 font-family: 'Sriracha', cursive;
 font-family: 'Roboto Slab', serif;
 font-family: 'Lovers Quarrel', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Patua One', cursive;
 
 */
 :root {
@@ -22,60 +26,87 @@ body,html {
   margin: 0px;
   height: 100%;
 }
-body, html, .tribute-title, #img-div, #image,#tribute-info{ width: 100%;}
-.survey-dropdown, .survey-label,.survey-dropdown input, .survey-dropdown select,{ width: 90%;}
-#header-img, #com-title, li .nav-link, #image{ display: block;}
-/*#header,*/ #nav-list,.tribute-title, #img-div{ overflow: hidden;}
-#header-img,#com-title{ float: left; }
-#tribute-info,.submit,.tribute-title,#img-div, .landing-main, .land-dropdown{ position: relative; }
-.fish1,.flag, #img-caption{ position: absolute;}
-#tribute-link, li .nav-link { text-decoration: none;}
-#header, li .nav-link{ color: var(--blue-orange-white);}
-#com-title, #nav-list, .montra{ width: auto;}
+/*--------------------------- Multiple style -----------------------------------*/
 
-/* Product Landing Css */
-@media screen and (max-width: 357px ) {
+body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #header,.survey-input{ width: 100%;}
+.survey-dropdown, .survey-label,.survey-dropdown input, .survey-dropdown select,{ width: 90%;}
+#header-img, #com-title, li .nav-link, #image, #form, .land-dropbtn, .land-dropdown:hover .land-dropdown-content{ display: block;}
+.land-dropdown-content a,.price-block, .price-block span, .copyright, .contact, .survey-dropdown{ display: block; }
+#nav-list,.tribute-title, #img-div{ overflow: hidden;}
+#header-img,#com-title{ float: left; }
+#tribute-info, .survey-submit, .tribute-title, #img-div, .landing-main, .land-dropdown, #form, .landing-form, #submit, .price-block span{ position: relative; }
+.fish1,.flag, #img-caption, .land-dropdown-content{ position: absolute;}
+#com-title, #nav-list, .montra, #form, .landing-form{ width: auto;}
+#header-img, #video, .price-block span, #footer, .form-layout, #main, .tribute-title, .flag img, #img-div, #image{ height: auto;}
+#header, #form{ margin-left: auto;  margin-right: auto; }
+#header, #submit, .price-block span, #footer, .form-layout{ background-color: var(--blue-orange-Da-blue); }
+#survey, li .nav-link:hover, .land-dropdown:hover .land-dropbtn, .price-block, .survey-submit{ background-color: var(--blue-orange-Br-blue); }
+.montra, #services h2{ color: var(--blue-orange-Da-blue);}
+#header, li .nav-link, li .nav-link:link, #submit, .price-block span, #footer, .form-layout, .survey-submit{ color: var(--blue-orange-white);}
+.montra, .land-dropbtn,.price-block, .contact, .survey-head, .motto, .tribute-title p{ text-align: center; }
+#tribute-link, li .nav-link, .land-dropdown-content a { text-decoration: none;}
+#submit, .price-block span, .survey-submit, .tribute-title,#tribute-link{font-weight: bold;}
+.survey-submit, .land-dropbtn, .survey-submit, #tribute-link { cursor: pointer;}
+
+/*---------------------------- Product Landing Css ------------------------------*/
+@media screen and (max-width: 373px ) {
   .landing-main{
     width: 100vw;
     margin: 140px auto auto auto;
   }
   .land-dropdown { display: block;}
   #nav-bar{ display: none;}
+  #video{ width: 95%;}
+  .price-flex{
+    flex-direction: column;
+    align-content: center;
+  }
+  .copyright,.contact{
+    width: 100%;
+    text-align: center;
+  }
 }
-@media screen and (max-width: 531px )and (min-width: 358px) {
+@media screen and (max-width: 531px )and (min-width: 374px) {
   .landing-main{
     width: 100vw;
-    margin: 74px auto auto auto;
+    margin: 90px auto auto auto;
   }
   .land-dropdown { display: block;}
   #nav-bar{ display: none;}
+  #video{ width: 95%;}
+  .price-flex{
+    flex-direction: column;
+    align-content: center;
+  }
+  .copyright,.contact{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
 }
 @media screen and (min-width: 532px ) {
   .landing-main{
+    max-width: 900px;
     width: 80vw;
-    margin: 74px auto auto auto;
+    margin: 86px auto auto auto;
   }
   .land-dropdown { display: none;}
   #nav-bar{ display: block;}
+  #video{ width: 80%;}
+  .price-flex{ flex-direction: row;}
 }
+
 #header{
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   box-sizing:border-box;
   padding: 6px;
   z-index: 2;
-  background-color: var(--blue-orange-Da-blue);
   font-family: 'Piedra', cursive;
 }
 #header-img{
-  padding-top: 3px;
-}
-.landing-main{
-  border: 3px solid blue;
+  width: 68px;
 }
 #com-title{
   padding-left: 8px;
@@ -87,54 +118,49 @@ li .nav-link{
   border: 0 solid black;
   border-radius: 20px;
 }
-li .nav-link:link{ color: var(--blue-orange-white);}
-li .nav-link:hover{ background-color: var(--blue-orange-Br-blue);}
+
+
 #nav-list{
   list-style-type: none;
   margin: 0;
   padding-top: 22px;
 }
 .montra{
-  text-align: center;
   font-family: 'Sriracha', cursive;
-  color: var(--blue-orange-Da-blue);
 }
-.price-flex{
-  display: flex;
-}
+
 .landing-form{
-  border: 2px solid black;
-  width: auto;
   margin: 0px auto;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
 #submit{
-  position: relative;
-  left: -14px;
+  left: -8px;
   height: 34px;
   border: 0px solid black;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  background-color: var(--blue-orange-Da-blue);
-  color: var(--blue-orange-white);
-  font-weight: bold;
+  border-radius: 3px;
+}
+#video{
+  border: 0px solid black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
 }
 .land-dropdown, .land-dropbtn, #nav-list li{ float: right; }
 .land-dropbtn {
-  display: block;
-  text-align: center;
   border: 0px solid black;
   border-radius: 25px;
   color: white;
   width: 63px;
   height: 34px;
-  cursor: pointer;
   margin-top: 22px;
   padding-top: 8px;
 }
 .land-dropdown-content {
   display: none;
-  position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -145,34 +171,74 @@ li .nav-link:hover{ background-color: var(--blue-orange-Br-blue);}
 .land-dropdown-content a {
   color: black;
   padding: 12px 16px;
-  text-decoration: none;
-  display: block;
 }
 .land-dropdown-content a:hover {background-color: #f1f1f1}
-.land-dropdown:hover .land-dropdown-content {
-  display: block;
-}
-.land-dropdown:hover .land-dropbtn {
-  background-color: var(--blue-orange-Br-blue);
-}
 
-/* Survey Page Css */
-#survey{
-  background-color: var(--blue-orange-Br-blue);
+
+.landing-video{
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  margin: 25px auto;
 }
+#services h2{
+  font-family: 'Roboto Slab', serif;
+}
+ #services{
+   font-family: 'Roboto', sans-serif;
+   padding:15px;
+   border: 0px solid black;
+   border-radius: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
+ }
+
+ .price-flex{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .price-block{
+   width: 208px;
+   border: 0px;
+   border-radius: 15px;
+   padding-bottom: 10px;
+   margin: 25px;
+   line-height: 2.0;
+   box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
+ }
+ .price-block span{
+   border: 0px;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+ }
+ #footer{
+   padding: 15px;
+   overflow: hidden;
+ }
+ .copyright{
+   font-size: 11px;
+   float: left;
+ }
+
+ .contact{
+   float: right;
+   font-size: 12px;
+   line-height: 1.5;
+ }
+
+/* ----------------------- Survey Page Css -------------------------------------*/
+
  .form-layout{
    max-width: 600px;
-   height: auto;
    margin: 25px auto;
    padding: 20px;
-   color: var(--blue-orange-white);
-   background-color: var(--blue-orange-Da-blue);
    line-height: 2.2;
    border: 0;
    border-radius: 10px;
  }
  .survey-head{
-   text-align: center;
    font-size: 24px;
  }
  .survey-head h1{
@@ -181,31 +247,27 @@ li .nav-link:hover{ background-color: var(--blue-orange-Br-blue);}
  .survey-dropdown, .survey-label{
    margin: auto 5%;
  }
- .submit{
+
+ .survey-submit{
   left: 38%;
   width: 120px;
   height: 30px;
-  border: 0;
+  border: 2px solid white;
   border-radius: 4px;
-  font-weight: bold;
-  color: var(--blue-orange-white);
-  background-color: var(--blue-orange-Br-blue);
  }
-#sub{
-  color: var(--blue-orange-white);
-  background-color: var(--blue-orange-orange);
+.survey-submit:hover{
+  color: var(--blue-orange-Br-blue);
+  background-color: var(--blue-orange-white);
 }
 
- /* Tribute Page css */
-#b1{text-shadow: -6px 3px 2px rgb(0, 37, 253);}
-#b2{text-shadow: -6px 3px 2px yellow;}
-#b3{text-shadow: -6px 3px 2px rgb(0, 220, 0);}
+
+ /*---------------------- Tribute Page css -------------------------------------*/
+
 #tribute{
   background: fixed no-repeat url('https://i2.pickpik.com/photos/188/550/343/water-texture-ripples-aqua-preview.jpg');
   background-size: cover;
 }
 #main, #content, #image { margin: auto; }
-#main, .tribute-title, .flag img, #img-div, #image{ height: auto; }
 #main { width: 95vw; }
 
 .fish1 {
@@ -286,15 +348,16 @@ li .nav-link:hover{ background-color: var(--blue-orange-Br-blue);}
 }
 
 .tribute-title {
-  font-family: 'Lovers Quarrel', cursive;
-  font-size: 9vmin;
-  font-weight: bold;
+  /*font-family: 'Lovers Quarrel', cursive;*/
+  font-family: 'Piedra', cursive;
+  font-size: 5vmin;
   margin-top: 10px;
   box-sizing: border-box;
   z-index: 3;
   line-height: 0.1;
   text-transform: capitalize;
   color: black;
+  text-shadow: -6px 3px 2px white;
 }
 
 .flag {
@@ -311,11 +374,9 @@ li .nav-link:hover{ background-color: var(--blue-orange-Br-blue);}
   font-size: 2.5vw;
   font-weight: normal;
   font-style: italic;
-  text-align: center;
   margin: 0;
 }
 
-.tribute-title p{ text-align: center; }
 
 #content {
   width: 85%;
@@ -347,8 +408,6 @@ li .nav-link:hover{ background-color: var(--blue-orange-Br-blue);}
 }
 
 #tribute-link {
-  cursor: pointer;
-  font-weight: bold;
   font-style: italic;
   color: black;
 }

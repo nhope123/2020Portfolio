@@ -18,19 +18,19 @@
       <!-- User Story 3 -->
       <form id="survey-form" class="" action="#" method="post">
         <!-- User Story 4 -->
-        <div class="survey-dropdown">
+        <div class="survey-dropdown ">
           <label id="name-label" for="name">Name</label><br>
-          <input id="name" type="text" name="name" required placeholder="John">
+          <input id="name" class="survey-input"  type="text" name="name" required placeholder="John">
         </div>
         <!-- User Story 5 -->
         <div class="survey-dropdown">
           <label id="email-label" for="email">Email</label><br>
-          <input id="email"  type="email" name="email" required pattern="[a-z]\w*@[a-z]\w*.[a-z]{3}" placeholder="username@example.com">
+          <input id="email" class="survey-input"  type="email" name="email" required pattern="[a-z]\w*@[a-z]\w*.[a-z]{3}" placeholder="username@example.com">
         </div>
         <!-- User Story 7 -->
         <div class="survey-dropdown">
           <label id="number-label" for="number">Age</label><br>
-          <input id="number" type="number" name="age" placeholder="1" pattern="[0-9]*" max="120" min="1">
+          <input id="number" class="survey-input" type="number" name="age" placeholder="1" pattern="[0-9]*" max="120" min="1">
         </div>
         <!-- User Story 12 -->
         <div class="survey-dropdown">
@@ -104,11 +104,13 @@
           </fieldset>
         </div>
         <div class="survey-label">
-          <label for="comment">Any comments or suggestions?</label><br>
-          <textarea .survey-texarea id="comment" name="name" cols="67" rows="10" placeholder="Comment"></textarea>
+          <label for="comment">Any comments or suggestions?</label>
+          <div class="text-a" style="width: 100%; overflow: hidden;">
+            <textarea class="text-t" id="comment" name="name" cols="67" rows="10" placeholder="Comment"></textarea>
+          </div>
         </div>
         <div >
-          <button  id="submit" class="submit" type="submit" name="button">Submit</button>
+          <button  id="submit1" class="survey-submit" type="submit" name="button">Submit</button>
         </div>
       </form>
     </main>

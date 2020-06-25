@@ -12,7 +12,7 @@ font-family: 'Patua One', cursive;
 
 */
 :root {
-  --tribute-text-bg: rgba(250, 250, 250, 0.4);
+  --tribute-text-bg: rgba(250, 250, 250, 0.6);
   --blue-orange-white: rgba(255, 255, 255, 1); /* Blue Orange Color Scheme: White */
   --blue-orange-orange: rgba(253, 157, 105, 1); /* Blue Orange Color Scheme: Orange */
   --blue-orange-Du-blue: rgba(85, 165, 197, 1); /* Blue Orange Color Scheme: Dull Blue */
@@ -28,7 +28,7 @@ body,html {
 }
 /*--------------------------- Multiple style -----------------------------------*/
 
-body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #header,.survey-input, .text-t,.text-a{ width: 100%;}
+body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #header,.survey-dropdown .survey-input, .text-t,.text-a{ width: 100%;}
 .survey-dropdown, .survey-label,.survey-dropdown input, .survey-dropdown select{ width: 90%;}
 #header-img, #com-title, li .nav-link, #image, #form, .land-dropbtn, .land-dropdown:hover .land-dropdown-content{ display: block;}
 .land-dropdown-content a,.price-block, .price-block span, .copyright, .contact, .survey-dropdown{ display: block; }
@@ -47,6 +47,33 @@ body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #
 #tribute-link, li .nav-link, .land-dropdown-content a { text-decoration: none;}
 #submit, .price-block span, .survey-submit, .tribute-title,#tribute-link{font-weight: bold;}
 .survey-submit, .land-dropbtn, .survey-submit, #tribute-link { cursor: pointer;}
+
+/*---------------------------- Documentation page -------------------------------*/
+.doc-container{
+  display: flex;
+  flex-direction: row;
+}
+.doc-navbar{
+  border: 2px solid red;
+  /*position: fixed;*/
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 178px;
+}
+#main-doc{
+  border: 2px solid black;
+  position: relative;/*
+  position: absolute;*/
+  width: 80%;
+}
+
+
+
+
+
+
 
 /*---------------------------- Product Landing Css ------------------------------*/
 @media screen and (max-width: 373px ) {
@@ -268,11 +295,13 @@ li .nav-link{
   background-size: cover;
 }
 #main, #content, #image { margin: auto; }
-#main { width: 95vw; }
+#main {
+  width: 95vw;
+  overflow-x: hidden;
+ }
 
 .fish1 {
   z-index: 0;
-  width: 6vw;
   display: inline;
   top: 100px;
   left: 35px;
@@ -281,6 +310,10 @@ li .nav-link{
   animation-delay: 1s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
+}
+.fish1 img{
+  width: 100px;
+  height: auto;
 }
 
 @keyframes swimmingFish {

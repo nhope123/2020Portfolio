@@ -14,31 +14,34 @@
         <header><h1>Shell Cheats</h1></header>
         <!-- User Story #10,12,13 -->
         <ul>
-          <li>
-            <a class="doc-navlink" href="#Introduction">Introduction</a>
-          </li>
-          <li>
-            <a class="doc-navlink" href="#List">List</a>
-          </li>
-          <li>
-            <a class="doc-navlink" href="#Cut">Cut</a>
-          </li>
-          <li>
-            <a class="doc-navlink" href="#Tar">Tar</a>
-          </li>
-          <li>
-            <a class="doc-navlink" href="#Find">Find</a>
-          </li>
-          <li>
-            <a class="doc-navlink" href="#Grep">Grep</a>
-          </li>
+          <a  class="doc-navlink" href="#Introduction" >
+            <li id="doc-intro" class="highlight" onclick="tabHighlight('doc-intro');displayContent('Introduction');">Introduction</li>
+          </a>
+          <a  class="doc-navlink" href="#List" >
+            <li id="doc-list" onclick="tabHighlight('doc-list');displayContent('List');">List</li>
+          </a>
+          <a  class="doc-navlink" href="#Cut" >
+            <li id="doc-cut" onclick="tabHighlight('doc-cut');displayContent('Cut');">Cut</li>
+          </a>
+          <a  class="doc-navlink" href="#Tar" >
+            <li id="doc-tar" onclick="tabHighlight('doc-tar');displayContent('Tar');">Tar</li>
+          </a>
+          <a  class="doc-navlink" href="#Find" >
+            <li id="doc-find" onclick="tabHighlight('doc-find');displayContent('Find');">Find</li>
+          </a>
+          <a  class="doc-navlink" href="#Grep" >
+            <li id="doc-grep" onclick="tabHighlight('doc-grep');displayContent('Grep');">Grep</li>
+          </a>
+          <a  class="doc-navlink" href="#Reference" >
+            <li id="doc-ref" onclick="tabHighlight('doc-ref');displayContent('Reference');">Reference</li>
+          </a>
         </ul>
       </nav>
       <!-- User Story #1 -->
       <main id="main-doc">
         <!-- User Story #2,4,6 -->
         <!-- BUG: section 0 Intoduction -->
-        <section id="Introduction" class="main-section">
+        <section id="Introduction" class="main-section display-on ">
           <header><h2>Introduction</h2></header>
           <div class="">
             <p>Those an equal point no years do. Depend warmth fat but her but
@@ -75,7 +78,7 @@
           </div>
         </section>
         <!-- BUG: section 1 list -->
-        <section id="List" class="main-section">
+        <section id="List" class="main-section display-off">
           <!-- BUG: Need to change the content -->
           <!-- User Story #3 -->
           <header><h2>List</h2></header>
@@ -111,7 +114,7 @@
           </div>
         </section>
         <!-- BUG: section 2 cut -->
-        <section id="Cut" class="main-section">
+        <section id="Cut" class="main-section display-off">
           <header><h2>Cut</h2></header>
           <div class="">
             <p>The cut command extracts sections from each line of files </p>
@@ -148,7 +151,7 @@
           <code>$ cut -d':' -f1,6,7 --output-delimiter='#' text.txt</code>
         </section>
         <!-- BUG: section 3 tar -->
-        <section id="Tar" class="main-section">
+        <section id="Tar" class="main-section display-off">
           <header><h2>Tar</h2></header>
           <div class="">
             <p>The tar command is an archiving utility which archive many files
@@ -193,7 +196,7 @@
           </div>
         </section>
         <!-- BUG: section 4 find -->
-        <section id="Find" class="main-section">
+        <section id="Find" class="main-section display-off">
           <header><h2>Find</h2></header>
           <!-- BUG: Need to change the content -->
           <div class="">
@@ -210,13 +213,13 @@
           </div>
         </section>
         <!-- BUG: section 5 grep content complete -->
-        <section id="Grep" class="main-section">
+        <section id="Grep" class="main-section display-off">
           <header><h2>Grep</h2></header>
           <div class="">
             <p>The grep command is a text processing utility. It searches a file
               for characters that match a certain pattern and print the matching lines.
             </p>
-            <dl class="">
+            <dl  class="">
               <h3>Options</h3>
               <dt>-e</dt>
               <dd>Match patterns</dd>
@@ -248,8 +251,22 @@
             <code>$ ps aux | grep httpd</code>
           </div>
         </section>
-
+        <section id="Reference" class="main-section display-off">
+          <header><h2>Reference</h2></header>
+          <div class="">
+            <ul>
+              <li>
+                <a href="https://linuxjourney.com/">Linux Journey</a>
+              </li>
+              <li>
+                <a href="https://www.tecmint.com/category/linux-commands/">TecMint</a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
   </div>
+
+  <script src="./../JS/project.js" charset="utf-8"></script>
   </body>
 </html>

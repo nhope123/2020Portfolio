@@ -2,73 +2,271 @@
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/project.css">
     <meta charset="utf-8">
     <title>Documentation</title>
   </head>
   <body>
-    <!-- User Story #8 -->
-    <nav id="navbar">
-      <!-- User Story #9,11 -->
-      <header>
+    <div class="doc-container">
+      <!-- User Story #8 -->
+      <nav class="doc-navbar" id="navbar">
+        <!-- User Story #9,11 -->
+        <header><h1>Shell Cheats</h1></header>
+        <!-- User Story #10,12,13 -->
+        <ul>
+          <a  class="doc-navlink" href="#Introduction" >
+            <li id="doc-intro" class="highlight" onclick="tabHighlight('doc-intro');displayContent('Introduction');">Introduction</li>
+          </a>
+          <a  class="doc-navlink" href="#List" >
+            <li id="doc-list" onclick="tabHighlight('doc-list');displayContent('List');">List</li>
+          </a>
+          <a  class="doc-navlink" href="#Cut" >
+            <li id="doc-cut" onclick="tabHighlight('doc-cut');displayContent('Cut');">Cut</li>
+          </a>
+          <a  class="doc-navlink" href="#Tar" >
+            <li id="doc-tar" onclick="tabHighlight('doc-tar');displayContent('Tar');">Tar</li>
+          </a>
+          <a  class="doc-navlink" href="#Find" >
+            <li id="doc-find" onclick="tabHighlight('doc-find');displayContent('Find');">Find</li>
+          </a>
+          <a  class="doc-navlink" href="#Grep" >
+            <li id="doc-grep" onclick="tabHighlight('doc-grep');displayContent('Grep');">Grep</li>
+          </a>
+          <a  class="doc-navlink" href="#Reference" >
+            <li id="doc-ref" onclick="tabHighlight('doc-ref');displayContent('Reference');">Reference</li>
+          </a>
+        </ul>
+      </nav>
+      <!-- User Story #1 -->
+      <main id="main-doc">
+        <!-- User Story #2,4,6 -->
+        <!-- BUG: section 0 Intoduction -->
+        <section id="Introduction" class="main-section display-on ">
+          <header><h2>Introduction</h2></header>
+          <div class="">
+            <p>Those an equal point no years do. Depend warmth fat but her but
+              played. Shy and subjects wondered trifling pleasant. Prudent cordial
+              comfort do no on colonel as assured chicken. Smart mrs day which begin.
+              Snug do sold mr it if such. Terminated uncommonly at at estimating.
+              Man behaviour met moonlight extremity acuteness direction.
+            </p>
+            <p>Of on affixed civilly moments promise explain fertile in. Assurance
+              advantage belonging happiness departure so of. Now improving and one
+              sincerity intention allowance commanded not. Oh an am frankness be
+              necessary earnestly advantage estimable extensive. Five he wife gone
+              ye. Mrs suffering sportsmen earnestly any. In am do giving to afford
+              parish settle easily garret.
+            </p>
+            <p>Abilities forfeited situation extremely my to he resembled. Old had
+              conviction discretion understood put principles you. Match means keeps
+              round one her quick. She forming two comfort invited. Yet she income
+              effect edward. Entire desire way design few. Mrs sentiments led
+              solicitude estimating friendship fat. Meant those event is weeks state
+              it to or. Boy but has folly charm there its. Its fact ten spot drew.
+            </p>
+            <p>Unpacked reserved sir offering bed judgment may and quitting speaking.
+              Is do be improved raptures offering required in replying raillery.
+              Stairs ladies friend by in mutual an no. Mr hence chief he cause.
+              Whole no doors on hoped. Mile tell if help they ye full name.
+            </p>
+            <p>Scarcely on striking packages by so property in delicate. Up or
+              well must less rent read walk so be. Easy sold at do hour sing spot.
+              Any meant has cease too the decay. Since party burst am it match.
+              By or blushes between besides offices noisier as. Sending do brought
+              winding compass in. Paid day till shed only fact age its end.
+            </p>
+          </div>
+        </section>
+        <!-- BUG: section 1 list -->
+        <section id="List" class="main-section display-off">
+          <!-- BUG: Need to change the content -->
+          <!-- User Story #3 -->
+          <header><h2>List</h2></header>
+          <!-- User Story #5 -->
+          <div class="">
+            <p>The tar command is an archiving utility which archive many files
+              into a neat single file. This single file carries a<code> .tar</code>
+              file extension. The bzip or gzip compression utility, combine with
+              the tar utility, reduces the file size.
+            </p>
+            <ul class="">
+              <h3>Options</h3>
+              <li>create a archive file.</li>
+              <li>extract a archive file.</li>
+              <li>show the progress of archive file.</li>
+              <li>filename of archive file.</li>
+              <li>viewing content of archive file.</li>
+              <li>filter archive through bzip2.</li>
 
-      </header>
-      <!-- User Story #10,12,13 -->
-      <a class="nav-link" href="#"></a>
-      <a class="nav-link" href="#"></a>
-      <a class="nav-link" href="#"></a>
-      <a class="nav-link" href="#"></a>
-      <a class="nav-link" href="#"></a>
-    </nav>
-    <!-- User Story #1 -->
-    <main id="main-doc">
-      <!-- User Story #2,4,6 -->
-      <section id="" class="main-section">
-        <!-- User Story #3 -->
-        <header>
+            </ul>
+            <h3>Archiving Syntax</h3>
+            <code>tar [option] tarfile.tar [files_to_archive]<br>$ tar cvf mytarfile.tar mycoolfile1 mycoolfile2</code>
+            <h3>To add compression with gzip</h3>
+            <code>$ tar czvf mytarfile.tar.gz mycoolfile1 mycoolfile2</code>
+            <h3>To create an archive and exclude particular files</h3>
+            <code>$ tar cvf mytarfile.tar --exclude=\*.{jpg,gif,png}  /location/of/files/</code>
+            <h3>Extracting Syntax</h3>
+            <code>tar [option] archive_file.tar<br>$ tar xvf mytarfile.tar</code>
+            <h3>To uncompress with gzip</h3>
+            <code>$ tar xzvf mytarfile.tar.gz</code>
+            <h3>Show content of compressed archive</h3>
+            <code>$ tar ztvf archive_file.tar.gz</code>
+          </div>
+        </section>
+        <!-- BUG: section 2 cut -->
+        <section id="Cut" class="main-section display-off">
+          <header><h2>Cut</h2></header>
+          <div class="">
+            <p>The cut command extracts sections from each line of files </p>
+            <dl class="">
+              <p>Option</p>
+              <dt>-c</dt>
+              <dd>Select only these characters</dd>
+              <dt>-d</dt>
+              <dd>Use delimiter instead of TAB for field delimiter</dd>
+              <dt>-f</dt>
+              <dd>Select only these fields</dd>
+              <dt>-s</dt>
+              <dd>Do not print lines not containing delimiter</dd>
+              <dt>--complement</dt>
+              <dd>Complement the set of selected bytes, characters or fields</dd>
+              <dt>--output-delimiter=STRING</dt>
+              <dd>use STRING as the output delimiter</dd>
+            </dl>
+            <p></p>
+          </div>
+          <h3>Syntax</h3>
+          <code>$ cut option filename</code>
+          <h3>Select column of characters using range</h3>
+          <code>$ cut -c1-6 text.txt</code>
+          <h3>Select a specific field from files</h3>
+          <code>$ cut -f5 text.txt</code>
+          <h3>Select Fields Only When a Line Contains the Delimiter</h3>
+          <code>$ cut -d':' -f7 text.txt</code>
+          <h3>Select only Fields Specified in Fields</h3>
+          <code>$ cut -d':' -s -f7 text.txt</code>
+          <h3>Select All Fields not Specified</h3>
+          <code>$ cut -d':' --complement -f7 text.txt</code>
+          <h3>Change Output Delimiter for Display</h3>
+          <code>$ cut -d':' -f1,6,7 --output-delimiter='#' text.txt</code>
+        </section>
+        <!-- BUG: section 3 tar -->
+        <section id="Tar" class="main-section display-off">
+          <header><h2>Tar</h2></header>
+          <div class="">
+            <p>The tar command is an archiving utility which archive many files
+              into a neat single file. This single file carries a<code> .tar</code>
+              file extension. The bzip or gzip compression utility, combine with
+              the tar utility, reduces the file size.
+            </p>
+            <dl class="">
+              <h3>Options</h3>
+              <dt>c</dt>
+              <dd>create a archive file.</dd>
+              <dt>x</dt>
+              <dd>extract a archive file.</dd>
+              <dt>v</dt>
+              <dd>show the progress of archive file.</dd>
+              <dt>f</dt>
+              <dd>filename of archive file.</dd>
+              <dt>t</dt>
+              <dd>viewing content of archive file.</dd>
+              <dt>j</dt>
+              <dd>filter archive through bzip2.</dd>
+              <dt>z</dt>
+              <dd>filter archive through gzip.</dd>
+              <dt>r</dt>
+              <dd>append or update files or directories to existing archive file.</dd>
+              <dt>w</dt>
+              <dd>Verify a archive file.</dd>
 
-        </header>
-        <!-- User Story #5 -->
-        <div class="">
-          <p></p>
-          <p></p>
-        </div>
-      </section>
-      <section id="" class="main-section">
-        <header>
+            </dl>
+            <h3>Archiving Syntax</h3>
+            <code>tar [option] tarfile.tar [files_to_archive]<br>$ tar cvf mytarfile.tar mycoolfile1 mycoolfile2</code>
+            <h3>To add compression with gzip</h3>
+            <code>$ tar czvf mytarfile.tar.gz mycoolfile1 mycoolfile2</code>
+            <h3>To create an archive and exclude particular files</h3>
+            <code>$ tar cvf mytarfile.tar --exclude=\*.{jpg,gif,png}  /location/of/files/</code>
+            <h3>Extracting Syntax</h3>
+            <code>tar [option] archive_file.tar<br>$ tar xvf mytarfile.tar</code>
+            <h3>To uncompress with gzip</h3>
+            <code>$ tar xzvf mytarfile.tar.gz</code>
+            <h3>Show content of compressed archive</h3>
+            <code>$ tar ztvf archive_file.tar.gz</code>
+          </div>
+        </section>
+        <!-- BUG: section 4 find -->
+        <section id="Find" class="main-section display-off">
+          <header><h2>Find</h2></header>
+          <!-- BUG: Need to change the content -->
+          <div class="">
+            <p>The find command locate a list of files and directories based on
+              specified matching conditions.
+              the arguments.
+            </p>
+            <dl class="">
+              <h3>Options</h3>
+              <dt></dt>
 
-        </header>
-        <div class="">
-          <p></p>
-          <p></p>
-        </div>
-      </section>
-      <section id="" class="main-section">
-        <header>
+            </dl>
 
-        </header>
-        <div class="">
-          <p></p>
-          <p></p>
-        </div>
-      </section>
-      <section id="" class="main-section">
-        <header>
+          </div>
+        </section>
+        <!-- BUG: section 5 grep content complete -->
+        <section id="Grep" class="main-section display-off">
+          <header><h2>Grep</h2></header>
+          <div class="">
+            <p>The grep command is a text processing utility. It searches a file
+              for characters that match a certain pattern and print the matching lines.
+            </p>
+            <dl  class="">
+              <h3>Options</h3>
+              <dt>-e</dt>
+              <dd>Match patterns</dd>
+              <dt>-i</dt>
+              <dd>Ignore case distinction</dd>
+              <dt>-l</dt>
+              <dd> Suppress normal output and print the  name  of the first
+                matching input file.</dd>
+              <dt>-n</dt>
+              <dd>Show line numbers as well as the matching lines</dd>
+              <dt>-A <u>num</u></dt>
+              <dd>Print <u>num</u> of lines after matching lines.</dd>
+              <dt>-B <u>num</u></dt>
+              <dd>Print <u>num</u> of lines before matching lines.</dd>
+            </dl>
+            <h3>Syntax</h3>
+            <code>grep -option PATTERN files<br>$ grep -i somepattern somefile </code>
+            <h3>Find <i>Fan</i> or <i>Gan</i> in all files in the current dir</h3>
+            <code>$ grep '[FG]an' *</code>
+            <h3>Show filenames containing case-insensitive pattern </h3>
+            <code>$ grep -il string *.html</code>
+            <h3>Show matching line numbers</h3>
+            <code>$ grep -n we address.txt</code>
+            <h3>Print lines before and after grep match</h3>
+            <code>$ grep -B5 -A5 "st" address.txt</code>
+            <h3>Search multiple patterns</h3>
+            <code>$ grep -e 'car|van|suv' driver.txt</code>
+            <h3>Grep in a pipeline</h3>
+            <code>$ ps aux | grep httpd</code>
+          </div>
+        </section>
+        <section id="Reference" class="main-section display-off">
+          <header><h2>Reference</h2></header>
+          <div class="">
+            <ul>
+              <li>
+                <a href="https://linuxjourney.com/">Linux Journey</a>
+              </li>
+              <li>
+                <a href="https://www.tecmint.com/category/linux-commands/">TecMint</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+  </div>
 
-        </header>
-        <div class="">
-          <p></p>
-          <p></p>
-        </div>
-      </section>
-      <section id="" class="main-section">
-        <header>
-
-        </header>
-        <div class="">
-          <p></p>
-          <p></p>
-        </div>
-      </section>
-    </main>
+  <script src="./../JS/project.js"></script>
   </body>
 </html>

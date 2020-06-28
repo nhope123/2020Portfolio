@@ -12,7 +12,7 @@ font-family: 'Patua One', cursive;
 
 */
 :root {
-  --tribute-text-bg: rgba(250, 250, 250, 0.4);
+  --tribute-text-bg: rgba(250, 250, 250, 0.6);
   --blue-orange-white: rgba(255, 255, 255, 1); /* Blue Orange Color Scheme: White */
   --blue-orange-orange: rgba(253, 157, 105, 1); /* Blue Orange Color Scheme: Orange */
   --blue-orange-Du-blue: rgba(85, 165, 197, 1); /* Blue Orange Color Scheme: Dull Blue */
@@ -28,25 +28,94 @@ body,html {
 }
 /*--------------------------- Multiple style -----------------------------------*/
 
-body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #header,.survey-input, .text-t,.text-a{ width: 100%;}
+body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block h2, #header,.survey-dropdown .survey-input, .text-t,.text-a{ width: 100%;}
 .survey-dropdown, .survey-label,.survey-dropdown input, .survey-dropdown select{ width: 90%;}
 #header-img, #com-title, li .nav-link, #image, #form, .land-dropbtn, .land-dropdown:hover .land-dropdown-content{ display: block;}
-.land-dropdown-content a,.price-block, .price-block span, .copyright, .contact, .survey-dropdown{ display: block; }
-#nav-list,.tribute-title, #img-div, .text-a{ overflow: hidden;}
+.land-dropdown-content a,.price-block, .price-block h2, .copyright, .contact, .survey-dropdown{ display: block; }
+#nav-list, #img-div, .text-a{ overflow: hidden;}
 #header-img,#com-title{ float: left; }
-#tribute-info, .survey-submit, .tribute-title, #img-div, .landing-main, .land-dropdown, #form, .landing-form, #submit, .price-block span{ position: relative; }
+#tribute-info, .survey-submit, .tribute-title, #img-div, .landing-main, .land-dropdown, #form, .landing-form, #submit, .price-block h2{ position: relative; }
 .fish1,.flag, #img-caption, .land-dropdown-content{ position: absolute;}
 #com-title, #nav-list, .montra, #form, .landing-form{ width: auto;}
-#header-img, #video, .price-block span, #footer, .form-layout, #main, .tribute-title, .flag img, #img-div, #image{ height: auto;}
+#header-img, #video, .price-block h2, #footer, .form-layout, #main, .tribute-title, .flag img, #img-div, #image{ height: auto;}
 #header, #form{ margin-left: auto;  margin-right: auto; }
-#header, #submit, .price-block span, #footer, .form-layout{ background-color: var(--blue-orange-Da-blue); }
+#header, #submit, .price-block h2, #footer, .form-layout{ background-color: var(--blue-orange-Da-blue); }
 #survey, li .nav-link:hover, .land-dropdown:hover .land-dropbtn, .price-block, .survey-submit{ background-color: var(--blue-orange-Br-blue); }
 .montra, #services h2{ color: var(--blue-orange-Da-blue);}
-#header, li .nav-link, li .nav-link:link, #submit, .price-block span, #footer, .form-layout, .survey-submit{ color: var(--blue-orange-white);}
-.montra, .land-dropbtn,.price-block, .contact, .survey-head, .motto, .tribute-title p{ text-align: center; }
+#header, li .nav-link, li .nav-link:link, #submit, .price-block h2, #footer, .form-layout, .survey-submit{ color: var(--blue-orange-white);}
+.montra, .land-dropbtn,.price-block, .contact, .survey-head, .motto, .tribute-title h1{ text-align: center; }
 #tribute-link, li .nav-link, .land-dropdown-content a { text-decoration: none;}
-#submit, .price-block span, .survey-submit, .tribute-title,#tribute-link{font-weight: bold;}
+#submit, .price-block h2, .survey-submit, .tribute-title h1,#tribute-link{font-weight: bold;}
 .survey-submit, .land-dropbtn, .survey-submit, #tribute-link { cursor: pointer;}
+
+/*---------------------------- Documentation page -------------------------------*/
+.doc-container{
+  display: flex;
+  flex-direction: row;
+}
+.doc-navbar{
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 190px;
+  background-color: var(--blue-orange-orange);
+}
+.highlight{
+  background-color: var(--blue-orange-Da-blue);
+  color: var(--blue-orange-white);
+}
+.display-on{display: block;}
+.display-off{display: none;}
+.doc-navbar li{
+  width: 100%;
+  font-weight: bold;
+  list-style: none;
+  padding: 20px;
+  position: relative;
+
+}
+.doc-navbar li:hover{
+  position: relative;
+  background-color: var(--blue-orange-Da-blue);
+  z-index: 6;
+  box-shadow: 4px 3px 15px 0px rgba(27, 27, 26, 0.98);
+  color: var(--blue-orange-white);
+}
+
+
+.doc-navbar a{ text-decoration: none; color: var(--blue-orange-Da-blue);}
+.doc-navbar ul{ margin: 0px; padding: 0px; }
+.doc-navbar h1{
+  font-size: 20px;
+  text-align: center;
+}
+#main-doc{
+  position: relative;
+  /*padding-left: 15px;
+  padding-right: 15px;
+  */
+  padding: 15px;
+
+}
+.main-section{
+  width: 100%;
+  height: 99vh;
+  /*overflow:auto;*/
+}
+.main-section code{
+  position: relative;
+  border: 2px solid red;
+  margin-left: 25px;
+  width: 75%;
+
+
+}
+
+
+
+
+
 
 /*---------------------------- Product Landing Css ------------------------------*/
 @media screen and (max-width: 373px ) {
@@ -191,7 +260,7 @@ li .nav-link{
    border-radius: 20px;
    margin-top: 20px;
    margin-bottom: 20px;
-   box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
+   box-shadow: 4px 3px 15px 0px rgba(27, 27, 26, 0.98);
  }
 
  .price-flex{
@@ -208,10 +277,12 @@ li .nav-link{
    line-height: 2.0;
    box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
  }
- .price-block span{
+ .price-block h2{
    border: 0px;
    border-top-left-radius: 15px;
    border-top-right-radius: 15px;
+   margin: 0px;
+   font-size: 20px;
  }
  #footer{
    padding: 15px;
@@ -268,11 +339,13 @@ li .nav-link{
   background-size: cover;
 }
 #main, #content, #image { margin: auto; }
-#main { width: 95vw; }
+#main {
+  width: 95vw;
+  overflow-x: hidden;
+ }
 
 .fish1 {
   z-index: 0;
-  width: 6vw;
   display: inline;
   top: 100px;
   left: 35px;
@@ -281,6 +354,10 @@ li .nav-link{
   animation-delay: 1s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
+}
+.fish1 img{
+  width: 100px;
+  height: auto;
 }
 
 @keyframes swimmingFish {
@@ -348,12 +425,16 @@ li .nav-link{
 }
 
 .tribute-title {
-  font-family: 'Piedra', cursive;
-  font-size: 5vmin;
   margin-top: 10px;
   box-sizing: border-box;
   z-index: 3;
   line-height: 0.1;
+  overflow: visible;
+  padding: 15px;
+}
+.tribute-title h1{
+  font-family: 'Piedra', cursive;
+  font-size: 5vmin;
   text-transform: capitalize;
   color: black;
   text-shadow: -6px 3px 2px white;
@@ -368,7 +449,7 @@ li .nav-link{
 
 .flag img { width: 4vmin; }
 
-.motto {
+.motto, .motto h2 {
   font-family: 'Piedra', cursive;
   font-size: 2.5vw;
   font-weight: normal;

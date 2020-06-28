@@ -20,7 +20,7 @@ body,html{
   */
 
 #navbar{
-  border: 2px solid black;
+  border: 0px solid black;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   position: fixed;
@@ -60,7 +60,6 @@ body,html{
   text-shadow: -4px 4px 2px rgba(154,210,85,0.67);
 }
 #welcome-section{
-  border: 2px solid red;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -89,4 +88,69 @@ body,html{
   position: relative;
   display: block;
   width: 100%;
+  min-height: 100vh;
+  background-color: var(--compound-orange-li-blue);
+
+}
+#projects h2{
+  color: var(--compound-orange-white);
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 56px 10px 20px 10px;
+  text-decoration: underline;
+  line-height: 1.5;
+  font-size: 3vmin;
+  /*border-bottom: 2px solid var(--compound-orange-dr-blue)*/
+}
+.project-container{
+  border: 2px solid green;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.project-title{
+  border: 0px solid blue;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  width: 31%;
+  padding: 20px;
+  background-color: rgba(255,255,255, 0.2);
+}
+.project-title:hover{
+  transform: scale(1.1);
+  transition: 2s;
+  z-index: 6;
+  justify-content: center;
+}
+.project-title img{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.project-title h3{
+  position: relative;
+  top: -5px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+  background-color: var(--compound-orange-dr-blue);
+  color: var(--compound-orange-white);
+  line-height: 1.5;
+  font-size: 1.5vmin;
+  padding: 5px;
+
+}
+.project-title a{
+  text-decoration: none;
 }

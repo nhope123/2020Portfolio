@@ -28,24 +28,24 @@ body,html {
 }
 /*--------------------------- Multiple style -----------------------------------*/
 
-body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block span, #header,.survey-dropdown .survey-input, .text-t,.text-a{ width: 100%;}
+body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block h2, #header,.survey-dropdown .survey-input, .text-t,.text-a{ width: 100%;}
 .survey-dropdown, .survey-label,.survey-dropdown input, .survey-dropdown select{ width: 90%;}
 #header-img, #com-title, li .nav-link, #image, #form, .land-dropbtn, .land-dropdown:hover .land-dropdown-content{ display: block;}
-.land-dropdown-content a,.price-block, .price-block span, .copyright, .contact, .survey-dropdown{ display: block; }
-#nav-list,.tribute-title, #img-div, .text-a{ overflow: hidden;}
+.land-dropdown-content a,.price-block, .price-block h2, .copyright, .contact, .survey-dropdown{ display: block; }
+#nav-list, #img-div, .text-a{ overflow: hidden;}
 #header-img,#com-title{ float: left; }
-#tribute-info, .survey-submit, .tribute-title, #img-div, .landing-main, .land-dropdown, #form, .landing-form, #submit, .price-block span{ position: relative; }
+#tribute-info, .survey-submit, .tribute-title, #img-div, .landing-main, .land-dropdown, #form, .landing-form, #submit, .price-block h2{ position: relative; }
 .fish1,.flag, #img-caption, .land-dropdown-content{ position: absolute;}
 #com-title, #nav-list, .montra, #form, .landing-form{ width: auto;}
-#header-img, #video, .price-block span, #footer, .form-layout, #main, .tribute-title, .flag img, #img-div, #image{ height: auto;}
+#header-img, #video, .price-block h2, #footer, .form-layout, #main, .tribute-title, .flag img, #img-div, #image{ height: auto;}
 #header, #form{ margin-left: auto;  margin-right: auto; }
-#header, #submit, .price-block span, #footer, .form-layout{ background-color: var(--blue-orange-Da-blue); }
+#header, #submit, .price-block h2, #footer, .form-layout{ background-color: var(--blue-orange-Da-blue); }
 #survey, li .nav-link:hover, .land-dropdown:hover .land-dropbtn, .price-block, .survey-submit{ background-color: var(--blue-orange-Br-blue); }
 .montra, #services h2{ color: var(--blue-orange-Da-blue);}
-#header, li .nav-link, li .nav-link:link, #submit, .price-block span, #footer, .form-layout, .survey-submit{ color: var(--blue-orange-white);}
-.montra, .land-dropbtn,.price-block, .contact, .survey-head, .motto, .tribute-title p{ text-align: center; }
+#header, li .nav-link, li .nav-link:link, #submit, .price-block h2, #footer, .form-layout, .survey-submit{ color: var(--blue-orange-white);}
+.montra, .land-dropbtn,.price-block, .contact, .survey-head, .motto, .tribute-title h1{ text-align: center; }
 #tribute-link, li .nav-link, .land-dropdown-content a { text-decoration: none;}
-#submit, .price-block span, .survey-submit, .tribute-title,#tribute-link{font-weight: bold;}
+#submit, .price-block h2, .survey-submit, .tribute-title h1,#tribute-link{font-weight: bold;}
 .survey-submit, .land-dropbtn, .survey-submit, #tribute-link { cursor: pointer;}
 
 /*---------------------------- Documentation page -------------------------------*/
@@ -277,10 +277,12 @@ li .nav-link{
    line-height: 2.0;
    box-shadow: -4px 3px 15px 0px rgba(27, 27, 26, 0.98);
  }
- .price-block span{
+ .price-block h2{
    border: 0px;
    border-top-left-radius: 15px;
    border-top-right-radius: 15px;
+   margin: 0px;
+   font-size: 20px;
  }
  #footer{
    padding: 15px;
@@ -423,12 +425,16 @@ li .nav-link{
 }
 
 .tribute-title {
-  font-family: 'Piedra', cursive;
-  font-size: 5vmin;
   margin-top: 10px;
   box-sizing: border-box;
   z-index: 3;
   line-height: 0.1;
+  overflow: visible;
+  padding: 15px;
+}
+.tribute-title h1{
+  font-family: 'Piedra', cursive;
+  font-size: 5vmin;
   text-transform: capitalize;
   color: black;
   text-shadow: -6px 3px 2px white;
@@ -443,7 +449,7 @@ li .nav-link{
 
 .flag img { width: 4vmin; }
 
-.motto {
+.motto, .motto h2 {
   font-family: 'Piedra', cursive;
   font-size: 2.5vw;
   font-weight: normal;

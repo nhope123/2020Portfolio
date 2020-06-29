@@ -9,7 +9,8 @@ font-family: 'Roboto Slab', serif;
 font-family: 'Lovers Quarrel', cursive;
 font-family: 'Roboto', sans-serif;
 font-family: 'Patua One', cursive;
-
+font-family: 'Open Sans', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
 */
 :root {
   --tribute-text-bg: rgba(250, 250, 250, 0.6);
@@ -53,29 +54,40 @@ body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block h2, #he
   display: flex;
   flex-direction: row;
 }
-.doc-navbar{
+#navbar, #navbar h1{width: 200px;}
+#navbar{
   position: sticky;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 190px;
   background-color: var(--blue-orange-orange);
 }
-.highlight{
-  background-color: var(--blue-orange-Da-blue);
-  color: var(--blue-orange-white);
+#navbar h1{
+  display: block;;
+  font-size: 27px;
+  text-align: center;
+  margin: 0px 0px 12px 0px;
+  padding: 22px 22px 10px 22px;
+  border-bottom: 2px solid var(--blue-orange-white);
+  background-color: var(--blue-orange-Br-blue);
+  color: black;
+  text-shadow: -2px 0px 0px var(--blue-orange-white);
 }
-.display-on{display: block;}
-.display-off{display: none;}
-.doc-navbar li{
-  width: 100%;
-  font-weight: bold;
-  list-style: none;
-  padding: 20px;
+#doc-menu, #doc-menu li{ width: 96%;}
+#doc-menu, #doc-menu li, .doc-navlink{
   position: relative;
-
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
-.doc-navbar li:hover{
+.doc-navlink{
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  padding: 20px;
+}
+.doc-navlink:hover{
   position: relative;
   background-color: var(--blue-orange-Da-blue);
   z-index: 6;
@@ -83,42 +95,111 @@ body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block h2, #he
   color: var(--blue-orange-white);
 }
 
-
-.doc-navbar a{ text-decoration: none; color: var(--blue-orange-Da-blue);}
-.doc-navbar ul{ margin: 0px; padding: 0px; }
-.doc-navbar h1{
-  font-size: 20px;
-  text-align: center;
+.blue-font{ color: var(--blue-orange-Da-blue);}
+.highlight{
+  background-color: var(--blue-orange-Da-blue);
+  color: var(--blue-orange-white) ;
 }
+.display-on{display: block;}
+.display-off{display: none;}
+
+
 #main-doc{
   position: relative;
-  /*padding-left: 15px;
-  padding-right: 15px;
-  */
-  padding: 15px;
+  box-sizing: border-box;
+  padding: 0px 25px 25px 25px;
 
 }
+.doc-option dt, .doc-option dd{ padding-left: 30px; line-height: 1.2;}
 .main-section{
   width: 100%;
-  height: 99vh;
-  /*overflow:auto;*/
+  height: 100%;
+  max-width: 850px;
+  line-height: 1.7;
 }
-.main-section code{
+.main-section h2{
+  margin: 0px;
+  padding-top: 20px;
+  font-size: 26px;
+}
+.main-section h3{
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+
+}
+.main-section code, pre {
   position: relative;
-  border: 2px solid red;
-  margin-left: 25px;
-  width: 75%;
-
+  display: block;
+  width: 100%;
+  line-height: 1.7;
+  padding-left: 20px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: lighter;
+  background-color: 	rgba(49, 180, 232, 0.1);
+  border-left: 4px ridge var(--blue-orange-Da-blue);
+  box-shadow: -3px 3px 0px var(--blue-orange-Br-blue);
+  border-radius: 5px;
 
 }
-
-
+.ref-link, .ref-link:visited{
+  color: var(--blue-orange-Da-blue);
+  font-weight: bold;
+}
+.doc-top{
+  display: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  position: sticky;
+  bottom: 20px;
+  right: 10px;
+  z-index: 10;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: black;
+  background-color: var(--blue-orange-Br-blue);
+}
+.doc-top:hover{
+  background-color: var(--blue-orange-Da-blue);
+  color: white;
+}
 
 
 
 
 /*---------------------------- Product Landing Css ------------------------------*/
 @media screen and (max-width: 373px ) {
+  .doc-container{
+    flex-direction: column;
+  }
+  #navbar, #navbar h1{
+    position:relative;
+    height: auto;
+    width: 100%;
+  }
+  #doc-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+  }
+  #doc-menu li{width:45%;}
+  .doc-navlink{width: 100%;}
+  .doc-navlink, #doc-menu li{
+    display:block;
+    padding: 5px;
+    text-align: center;
+  }
+  .main-section code, pre{overflow-x: hidden; text-overflow:ellipsis;}
+  .doc-top{display: block;}
+
   .landing-main{
     width: 100vw;
     margin: 140px auto auto auto;

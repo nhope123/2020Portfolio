@@ -6,42 +6,41 @@ let sectionElementIdArray = ["Introduction", "List", "Cut", "Tar", "Find", "Grep
 function tabHighlight(id){
   switch (id) {
     case 'doc-intro':
-      document.getElementById('doc-intro').classList.add('highlight');
-      turnOff('doc-intro');
+      highlightSelected('doc-intro');
       break;
       case 'doc-list':
-        document.getElementById('doc-list').classList.add('highlight');
-        turnOff('doc-list');
+        highlightSelected('doc-list');
         break;
       case 'doc-cut':
-        document.getElementById('doc-cut').classList.add('highlight');
-        turnOff('doc-cut');
+        highlightSelected('doc-cut');
         break;
       case 'doc-tar':
-        document.getElementById('doc-tar').classList.add('highlight');
-        turnOff('doc-tar');
+        highlightSelected('doc-tar');
         break;
       case 'doc-find':
-        document.getElementById('doc-find').classList.add('highlight');
-        turnOff('doc-find');
+        highlightSelected('doc-find');
         break;
       case 'doc-grep':
-        document.getElementById('doc-grep').classList.add('highlight');
-        turnOff('doc-grep');
+        highlightSelected('doc-grep');
         break;
       case 'doc-ref':
-        document.getElementById('doc-ref').classList.add('highlight');
-        turnOff('doc-ref');
+        highlightSelected('doc-ref');
         break;
     default:
       break;
   }
 }
+
+function highlightSelected(id){
+  addClass(id,'highlight');
+  removeClass(id, 'blue-font');
+  turnOff(id);
+}
 // Removes the highlight class for navbar element
 function turnOff(id) {
   let arr = [...navElementIdArray];
   arr.splice(arr.indexOf(id),1);
-  arr.forEach((x)=>{ removeClass(x,'highlight' );})
+  arr.forEach((x)=>{ removeClass(x,'highlight' ); addClass(x, 'blue-font');});
 }
 // Displays the content for the selected tab
 function displayContent(id){

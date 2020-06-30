@@ -68,7 +68,7 @@ body, html, .tribute-title, #img-div, #image,#tribute-info, .price-block h2, #he
   text-align: center;
   margin: 0px 0px 12px 0px;
   padding: 22px 22px 10px 22px;
-  border-bottom: 2px solid var(--blue-orange-white);
+  border-bottom: 10px solid var(--blue-orange-white);
   background-color: var(--blue-orange-Br-blue);
   color: black;
   text-shadow: -2px 0px 0px var(--blue-orange-white);

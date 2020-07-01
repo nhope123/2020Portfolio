@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Piedra&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+/*
+font-family: 'Piedra', cursive;
+font-family: 'Sriracha', cursive;
+font-family: 'Roboto Slab', serif;
+font-family: 'Lovers Quarrel', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Patua One', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+*/
+:root {
+  --tribute-text-bg: rgba(250, 250, 250, 0.6);
+  --blue-orange-white: rgba(255, 255, 255, 1); /* Blue Orange Color Scheme: White */
+  --blue-orange-orange: rgba(253, 157, 105, 1); /* Blue Orange Color Scheme: Orange */
+  --blue-orange-Du-blue: rgba(85, 165, 197, 1); /* Blue Orange Color Scheme: Dull Blue */
+  --blue-orange-Br-blue: rgba(49, 180, 232, 1); /* Blue Orange Color Scheme: Bright Blue */
+  --blue-orange-Da-blue: rgba(13, 55, 72, 1); /* Blue Orange Color Scheme: Dark Blue */
+}
+
+* { box-sizing: border-box; }
+
+body,html {
+  margin: 0px;
+  height: 100%;
+  width: 100%
+}
+/*---------------------------- Documentation page -------------------------------*/
+.doc-container{
+  display: flex;
+  width: 100%;
+}
+#navbar{
+  z-index: 1;
+  background-color: var(--blue-orange-orange);
+}
+#navbar h1{
+  display: block;;
+  font-size: 27px;
+  text-align: center;
+  margin: 0px 0px 12px 0px;
+  padding: 22px 22px 10px 22px;
+  border-bottom: 10px solid var(--blue-orange-white);
+  background-color: var(--blue-orange-Br-blue);
+  color: black;
+  text-shadow: -2px 0px 0px var(--blue-orange-white);
+}
+#doc-menu, #doc-menu li, .doc-navlink{
+  position: relative;
+  display: block;
+  margin: 0px;/*
+  padding: 0px;*/
+  list-style: none;
+}
+.doc-navlink{
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  padding: 20px;
+}
+.doc-navlink:hover{
+  position: relative;
+  background-color: var(--blue-orange-Da-blue);
+  z-index: 6;
+  box-shadow: 4px 3px 15px 0px rgba(27, 27, 26, 0.98);
+  color: var(--blue-orange-white);
+}
+.blue-font{ color: var(--blue-orange-Da-blue);}
+.highlight{
+  background-color: var(--blue-orange-Da-blue);
+  color: var(--blue-orange-white) ;
+}
+.display-on{display: block;}
+.display-off{display: none;}
+#main-doc{
+  position: relative;
+  display: block;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0px 25px 25px 25px;
+
+}
+.doc-option dt, .doc-option dd{
+  padding-left: 30px;
+  line-height: 1.2;
+  white-space: normal;
+}
+.main-section{
+  width: 100%;
+  height: 100%;
+  max-width: 850px;
+  line-height: 1.7;
+  margin-right: 20px;
+}
+.main-section h2{
+  margin: 0px;
+  padding-top: 20px;
+  font-size: 26px;
+}
+.main-section h3{
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+
+}
+.main-section code, pre {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 1.7;
+  padding-left: 20px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: lighter;
+  background-color: 	rgba(49, 180, 232, 0.1);
+  border-left: 4px ridge var(--blue-orange-Da-blue);
+  box-shadow: -3px 3px 0px var(--blue-orange-Br-blue);
+  border-radius: 5px;
+  overflow-x: scroll;
+  white-space: nowrap;
+
+}
+.ref-link, .ref-link:visited{
+  color: var(--blue-orange-Da-blue);
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 530px ) {
+  .doc-container{
+      flex-direction: column;
+    }
+    #main-doc{
+    /*  position: relative;*/
+      width: 100%;
+    }
+    #navbar, #navbar h1{
+      position:relative;
+      height: auto;
+      width: 100%;
+    }
+    #doc-menu{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      padding: 0px;
+    }
+    #doc-menu li{width:49%;}
+    .doc-navlink{width: 100%;}
+    .doc-navlink, #doc-menu li{
+      display:block;
+      padding: 5px;
+      text-align: center;
+    }
+
+  }
+@media screen and (min-width: 531px) {
+  .doc-container{
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    #main-doc{
+      width: 70%;
+      min-width: 321px;
+    }
+     #navbar h1{
+      position:relative;
+      height: auto;
+       width: 100%;
+    }
+    #navbar{
+      width: 19%;
+      min-width: 200px;
+      position: sticky;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      height: 100vh;
+    }
+    #doc-menu{
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+    #doc-menu li{width:96%;}
+    .doc-navlink{width: 100%;}
+    .doc-navlink, #doc-menu li{
+      display:block;
+      margin: 0px;
+    }

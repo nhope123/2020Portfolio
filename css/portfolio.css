@@ -109,7 +109,8 @@ body, html, #navbar ul, #welcome-section, #welcome-section h1, #welcome-section 
 }
 #welcome-section h1{
   color:var(--compound-orange-dr-blue);
-  font-family: 'Caveat', cursive;
+  /*font-family: 'Caveat', cursive;*/
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
 }
 #welcome-section h2{
